@@ -1,0 +1,570 @@
+<!doctype html>
+<html lang="sr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Merriweather|Tangerine|Caveat" rel="stylesheet">
+    <!-- Bootstrap CSS
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"> -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+    <!-- My CSS -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <title>Моделирање и симулација п.р.</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"><img src="Pictures/logo3.png" width="90" height="60" class="d-inline-block align-top rounded" alt="M3Design"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="https://slobodan-iv.github.io/mpr1/">Моделирање пом. рач. 1</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="https://slobodan-iv.github.io/mpr2/">Моделирање пом. рач. 2</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="https://slobodan-iv.github.io/mpr3/">Моделирање пом. рач. 3</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                Повезани Web site-ови
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="https://slobodan-iv.github.io/modeliranje/">Моделирање и симулација пом. рач. - изб. пр.</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="https://slobodan-iv.github.io/kompjuterska_grafika/">Компјутерска графика</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="https://slobodan-iv.github.io/konstruisanje/">Конструисање</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="https://slobodan-iv.github.io/alat_za_savijanje/">Конструисање алата за савијање</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="https://slobodan-iv.github.io/cnc_programiranje/">CNC програмирање</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav><!-- navbar -->
+    <!-- container -->
+    <div class="container">
+      <!-- Content here -->
+      <div>
+        <h1>Моделирање и симулација помоћу рачунара</h1>
+        <div class="row justify-content-center">
+          <div class="col-12 col-sm-12 col-md-11 col-lg-10">
+            <ul class="nav nav-tabs" id="mpr_tab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="mpr1-tab" data-bs-toggle="tab" data-bs-target="#mpr1" type="button" role="tab" aria-controls="mpr1" aria-selected="true">Моделирање п. р. 1</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="mpr2-tab" data-bs-toggle="tab" data-bs-target="#mpr2" type="button" role="tab" aria-controls="mpr2" aria-selected="true">Моделирање п. р. 2</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="mpr3-tab" data-bs-toggle="tab" data-bs-target="#mpr3" type="button" role="tab" aria-controls="mpr3" aria-selected="true">Моделирање п. р. 3</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="mali_dodatak-tab" data-bs-toggle="tab" data-bs-target="#mali_dodatak" type="button" role="tab" aria-controls="mali_dodatak" aria-selected="true">Мали додатак</button>
+              </li>
+            </ul>
+            <div class="tab-content" id="mpr_TabContent">
+              <div class="tab-pane show active" id="mpr1" role="tabpanel" aria-labelledby="mpr1-tab">
+                <div class="accordion" id="mpr1_pregled">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="standardni_elementi">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_standardni_elementi" aria-expanded="true" aria-controls="collapse_standardni_elementi">
+                        Стандардни елементи
+                      </button>
+                    </h2>
+                    <div id="collapse_standardni_elementi" class="accordion-collapse collapse show" aria-labelledby="standardni_elementi" data-bs-parent="#mpr1_pregled">
+                      <div class="accordion-body">
+                        <ul class="nav nav-tabs" id="st_me" role="tablist">
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="zakovica-tab" data-bs-toggle="tab" data-bs-target="#zakovica" type="button" role="tab" aria-controls="zakovica" aria-selected="true">Заковица</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="klin-tab" data-bs-toggle="tab" data-bs-target="#klin" type="button" role="tab" aria-controls="klin" aria-selected="true">Клин</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="navrtka-tab" data-bs-toggle="tab" data-bs-target="#navrtka" type="button" role="tab" aria-controls="navrtka" aria-selected="false">Навртка</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="podloska-tab" data-bs-toggle="tab" data-bs-target="#podloska" type="button" role="tab" aria-controls="podloska" aria-selected="false">Подлошка</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="zavrtanj-tab" data-bs-toggle="tab" data-bs-target="#zavrtanj" type="button" role="tab" aria-controls="zavrtanj" aria-selected="false">Завртањ</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="sklop-tab" data-bs-toggle="tab" data-bs-target="#sklop" type="button" role="tab" aria-controls="sklop" aria-selected="false">Склоп</button>
+                          </li>
+                        </ul>
+                        <div class="tab-content" id="st_me_TabContent">
+                          <div class="tab-pane show active" id="zakovica" role="tabpanel" aria-labelledby="zakovica-tab">
+                            <div class="card ratio ratio-16x9">
+                              <iframe width="560" height="315" src="https://www.youtube.com/embed/FybdpsdgEcc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                          </div>
+                          <div class="tab-pane" id="klin" role="tabpanel" aria-labelledby="klin-tab">
+                            <div class="card ratio ratio-16x9">
+                              <iframe width="560" height="315" src="https://www.youtube.com/embed/cpn-_tlQFMo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                          </div>
+                          <div class="tab-pane" id="navrtka" role="tabpanel" aria-labelledby="navrtka-tab">
+                            <div class="card ratio ratio-16x9">
+                              <iframe width="560" height="315" src="https://www.youtube.com/embed/ua--n5kSMiQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                          </div>
+                          <div class="tab-pane" id="podloska" role="tabpanel" aria-labelledby="podloska-tab">
+                            <div class="card ratio ratio-16x9">
+                              <iframe width="560" height="315" src="https://www.youtube.com/embed/Xba0vHwbkOw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                          </div>
+                          <div class="tab-pane" id="zavrtanj" role="tabpanel" aria-labelledby="zavrtanj-tab">
+                            <div class="card ratio ratio-16x9">
+                              <iframe width="560" height="315" src="https://www.youtube.com/embed/YTZhFPrK1oE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                          </div>
+                          <div class="tab-pane" id="sklop" role="tabpanel" aria-labelledby="sklop-tab">
+                            <div class="card ratio ratio-16x9">
+                              <iframe width="560" height="315" src="https://www.youtube.com/embed/WSsmFfKdgR0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="vratila">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_vratila" aria-expanded="true" aria-controls="collapse_vratila">
+                        Вратила
+                      </button>
+                    </h2>
+                    <div id="collapse_vratila" class="accordion-collapse collapse" aria-labelledby="vratila" data-bs-parent="#mpr1_pregled">
+                      <div class="accordion-body">
+                        <ul class="nav nav-tabs" id="vratila_Tab" role="tablist">
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="pogonsko_vratilo-tab" data-bs-toggle="tab" data-bs-target="#pogonsko_vratilo" type="button" role="tab" aria-controls="pogonsko_vratilo" aria-selected="true">Погонско вратило</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="kolenasto_vratilo-tab" data-bs-toggle="tab" data-bs-target="#kolenasto_vratilo" type="button" role="tab" aria-controls="kolenasto_vratilo" aria-selected="true">Коленасто вратило</button>
+                          </li>
+                        </ul>
+                        <div class="tab-content" id="vratila_TabContent">
+                          <div class="tab-pane show active" id="pogonsko_vratilo" role="tabpanel" aria-labelledby="pogonsko_vratilo-tab">
+                            <div class="card ratio ratio-16x9">
+                              <iframe width="560" height="315" src="https://www.youtube.com/embed/WbyEHeAaW5o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                          </div>
+                          <div class="tab-pane" id="kolenasto_vratilo" role="tabpanel" aria-labelledby="kolenasto_vratilo-tab">
+                            <div class="card ratio ratio-16x9">
+                              <iframe width="560" height="315" src="https://www.youtube.com/embed/IpnLmFsEA7M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="spojnice">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_spojnice" aria-expanded="true" aria-controls="collapse_spojnice">
+                        Спојнице
+                      </button>
+                    </h2>
+                    <div id="collapse_spojnice" class="accordion-collapse collapse" aria-labelledby="spojnice" data-bs-parent="#mpr1_pregled">
+                      <div class="accordion-body">
+                        <ul class="nav nav-tabs" id="spojnice_Tab" role="tablist">
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="prirubna_sp-tab" data-bs-toggle="tab" data-bs-target="#prirubna_sp" type="button" role="tab" aria-controls="prirubna_sp" aria-selected="true">Прирубна</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="elasticna-tab" data-bs-toggle="tab" data-bs-target="#elasticna" type="button" role="tab" aria-controls="elasticna" aria-selected="true">Еластична</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="frikciona-tab" data-bs-toggle="tab" data-bs-target="#frikciona" type="button" role="tab" aria-controls="frikciona" aria-selected="false">Фрикциона</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="kardan-tab" data-bs-toggle="tab" data-bs-target="#kardan" type="button" role="tab" aria-controls="kardan" aria-selected="false">Кардан</button>
+                          </li>
+                        </ul>
+                        <div class="tab-content" id="spojnice_TabContent">
+                          <div class="tab-pane show active" id="prirubna_sp" role="tabpanel" aria-labelledby="prirubna_sp-tab">
+                            <div class="card ratio ratio-16x9">
+                              <iframe width="560" height="315" src="https://www.youtube.com/embed/xzLQsBSZi04" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                          </div>
+                          <div class="tab-pane" id="elasticna" role="tabpanel" aria-labelledby="elasticna-tab">
+                            <div class="card ratio ratio-16x9">
+                              <iframe width="560" height="315" src="https://www.youtube.com/embed/j8FvmA7XRK4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                          </div>
+                          <div class="tab-pane" id="frikciona" role="tabpanel" aria-labelledby="frikciona-tab">
+                            <div class="card ratio ratio-16x9">
+                              <iframe width="560" height="315" src="https://www.youtube.com/embed/npoMby1bZJA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                          </div>
+                          <div class="tab-pane" id="kardan" role="tabpanel" aria-labelledby="kardan-tab">
+                            <div class="card ratio ratio-16x9">
+                              <iframe width="560" height="315" src="https://www.youtube.com/embed/1lIYnUhPlho" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="lezaj">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_lezaj" aria-expanded="true" aria-controls="collapse_lezaj">
+                        Лежај
+                      </button>
+                    </h2>
+                    <div id="collapse_lezaj" class="accordion-collapse collapse" aria-labelledby="lezaj" data-bs-parent="#mpr1_pregled">
+                      <div class="accordion-body">
+                        <div class="card ratio ratio-16x9">
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/ZpfuLkRXytA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="skip">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_skip" aria-expanded="true" aria-controls="collapse_skip">
+                        СКиП
+                      </button>
+                    </h2>
+                    <div id="collapse_skip" class="accordion-collapse collapse" aria-labelledby="skip" data-bs-parent="#mpr1_pregled">
+                      <div class="accordion-body">
+                        <div class="card ratio ratio-16x9">
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/OyxW0l2MGk4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="mpr2" role="tabpanel" aria-labelledby="mpr2-tab">
+                <div class="accordion" id="mpr2_pregled">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="frikcioni_parovi">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_frikcioni_parovi" aria-expanded="true" aria-controls="collapse_frikcioni_parovi">
+                        Фрикциони парови
+                      </button>
+                    </h2>
+                    <div id="collapse_frikcioni_parovi" class="accordion-collapse collapse show" aria-labelledby="frikcioni_parovi" data-bs-parent="#mpr2_pregled">
+                      <div class="accordion-body">
+                        <ul class="nav nav-tabs" id="frikcioni_parovi_Tab" role="tablist">
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="cilindricni_fr_parovi-tab" data-bs-toggle="tab" data-bs-target="#cilindricni_fr_parovi" type="button" role="tab" aria-controls="cilindricni_fr_parovi" aria-selected="true">Цилиндрични</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link disabled" id="konusni_fr_parovi-tab" data-bs-toggle="tab" data-bs-target="#konusni_fr_parovi" type="button" role="tab" aria-controls="konusni_fr_parovi" aria-selected="true">Конусни</button>
+                          </li>
+                        </ul>
+                        <div class="tab-content" id="frikcioni_parovi_TabContent">
+                          <div class="tab-pane show active" id="cilindricni_fr_parovi" role="tabpanel" aria-labelledby="cilindricni_fr_parovi-tab">
+                            <div class="card ratio ratio-16x9">
+                              <iframe width="560" height="315" src="https://www.youtube.com/embed/LpL807cwne8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                          </div>
+                          <div class="tab-pane" id="konusni_fr_parovi" role="tabpanel" aria-labelledby="konusni_fr_parovi-tab">
+                            <div class="card ratio ratio-16x9">
+                              <iframe width="560" height="315" src="https://www.youtube.com/embed/LpL807cwne8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="zupcasti_parovi">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_zupcasti_parovi" aria-expanded="true" aria-controls="collapse_zupcasti_parovi">
+                        Зупчасти парови
+                      </button>
+                    </h2>
+                    <div id="collapse_zupcasti_parovi" class="accordion-collapse collapse" aria-labelledby="zupcasti_parovi" data-bs-parent="#mpr2_pregled">
+                      <div class="accordion-body">
+                        <ul class="nav nav-tabs" id="zupcasti_parovi_Tab" role="tablist">
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="cilindricni_zup_parovi-tab" data-bs-toggle="tab" data-bs-target="#cilindricni_zup_parovi" type="button" role="tab" aria-controls="cilindricni_zup_parovi" aria-selected="true">Цилиндрични</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="puzni_par-tab" data-bs-toggle="tab" data-bs-target="#puzni_par" type="button" role="tab" aria-controls="puzni_par" aria-selected="true">Пужни пар</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="konusni_zupcasti_par-tab" data-bs-toggle="tab" data-bs-target="#konusni_zupcasti_par" type="button" role="tab" aria-controls="konusni_zupcasti_par" aria-selected="true">Конусни пар</button>
+                          </li>
+                        </ul>
+                        <div class="tab-content" id="zupcasti_parovi_TabContent">
+                          <div class="tab-pane show active" id="cilindricni_zup_parovi" role="tabpanel" aria-labelledby="cilindricni_zup_parovi-tab">
+                            <div class="card ratio ratio-16x9">
+                              <iframe width="560" height="315" src="https://www.youtube.com/embed/r99NeTzj7xs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                          </div>
+                          <div class="tab-pane" id="puzni_par" role="tabpanel" aria-labelledby="puzni_par-tab">
+                            <div class="card ratio ratio-16x9">
+                              <iframe width="560" height="315" src="https://www.youtube.com/embed/JDcuMa95dFQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                          </div>
+                          <div class="tab-pane" id="konusni_zupcasti_par" role="tabpanel" aria-labelledby="konusni_zupcasti_par-tab">
+                            <div class="card ratio ratio-16x9">
+                              <iframe width="560" height="315" src="https://www.youtube.com/embed/KHBeiR-ii08" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="Lancani_par">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_lancani_par" aria-expanded="true" aria-controls="collapse_lancani_par">
+                        Ланчани пар
+                      </button>
+                    </h2>
+                    <div id="collapse_lancani_par" class="accordion-collapse collapse" aria-labelledby="Lancani_par" data-bs-parent="#mpr2_pregled">
+                      <div class="accordion-body">
+                        <ul class="nav nav-tabs" id="lancani_par_Tab" role="tablist">
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="dva_para_clanaka_lanca-tab" data-bs-toggle="tab" data-bs-target="#dva_para_clanaka_lanca" type="button" role="tab" aria-controls="dva_para_clanaka_lanca" aria-selected="true">Два пара чланака ланца</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="troredni_lanac-tab" data-bs-toggle="tab" data-bs-target="#troredni_lanac" type="button" role="tab" aria-controls="troredni_lanac" aria-selected="false">Троредни ланац</button>
+                          </li>
+                        </ul>
+                        <div class="tab-content" id="lancani_par_animacija_TabContent">
+                          <div class="tab-pane show active" id="dva_para_clanaka_lanca" role="tabpanel" aria-labelledby="dva_para_clanaka_lanca-tab">
+                            <div class="card ratio ratio-16x9">
+                              <iframe width="560" height="315" src="https://www.youtube.com/embed/BmvWJD8N5SQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                          </div>
+                          <div class="tab-pane" id="troredni_lanac" role="tabpanel" aria-labelledby="troredni_lanac-tab">
+                            <div class="card ratio ratio-16x9">
+                              <iframe width="560" height="315" src="https://www.youtube.com/embed/DAIe3MxZUUk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="remeni_parovi">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_remeni_parovi" aria-expanded="true" aria-controls="collapse_remeni_parovi">
+                        Ремени парови
+                      </button>
+                    </h2>
+                    <div id="collapse_remeni_parovi" class="accordion-collapse collapse" aria-labelledby="remeni_parovi" data-bs-parent="#mpr2_pregled">
+                      <div class="accordion-body">
+                        <ul class="nav nav-tabs" id="remeni_par_Tab" role="tablist">
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="pljosnati_remen-tab" data-bs-toggle="tab" data-bs-target="#pljosnati_remen" type="button" role="tab" aria-controls="pljosnati_remen" aria-selected="true">Каишни пар</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="klinasti_remen-tab" data-bs-toggle="tab" data-bs-target="#klinasti_remen" type="button" role="tab" aria-controls="klinasti_remen" aria-selected="false">Клинасти ремен</button>
+                          </li>
+                        </ul>
+                        <div class="tab-content" id="remeni_par_TabContent">
+                          <div class="tab-pane show active" id="pljosnati_remen" role="tabpanel" aria-labelledby="pljosnati_remen-tab">
+                            <div class="card ratio ratio-16x9">
+                              <iframe width="560" height="315" src="https://www.youtube.com/embed/gqqpkr3cIps" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                          </div>
+                          <div class="tab-pane" id="klinasti_remen" role="tabpanel" aria-labelledby="klinasti_remen-tab">
+                            <div class="card ratio ratio-16x9">
+                              <iframe width="560" height="315" src="https://www.youtube.com/embed/dCKp3NqMm0I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="mpr3" role="tabpanel" aria-labelledby="mpr3-tab">
+                <div class="accordion" id="mpr3_pregled">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="modeliranje_ventila">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_modeliranje_ventila" aria-expanded="true" aria-controls="collapse_modeliranje_ventila">
+                        Моделирање вентила: "Part Reviewer"
+                      </button>
+                    </h2>
+                    <div id="collapse_modeliranje_ventila" class="accordion-collapse collapse show" aria-labelledby="modeliranje_ventila" data-bs-parent="#mpr3_pregled">
+                      <div class="accordion-body">
+                        <div class="card ratio ratio-16x9">
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/SdUVvq2qYsc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="weldment">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_weldment" aria-expanded="true" aria-controls="collapse_weldment">
+                        Моделирање профилних цеви
+                      </button>
+                    </h2>
+                    <div id="collapse_weldment" class="accordion-collapse collapse" aria-labelledby="weldment" data-bs-parent="#mpr3_pregled">
+                      <div class="accordion-body">
+                        <div class="card ratio ratio-16x9">
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/UGC4hLr4Pms" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="kuciste">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_kuciste" aria-expanded="true" aria-controls="collapse_kuciste">
+                        Моделирање кућишта редуктора
+                      </button>
+                    </h2>
+                    <div id="collapse_kuciste" class="accordion-collapse collapse" aria-labelledby="kuciste" data-bs-parent="#mpr3_pregled">
+                      <div class="accordion-body">
+                        <div class="card ratio ratio-16x9">
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/JJhYH05FHDk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="sklopni_crtez_i_sablon">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_sklopni_crtez_i_sablon" aria-expanded="true" aria-controls="collapse_sklopni_crtez_i_sablon">
+                        Склопни цртеж и израда шаблона
+                      </button>
+                    </h2>
+                    <div id="collapse_sklopni_crtez_i_sablon" class="accordion-collapse collapse" aria-labelledby="sklopni_crtez_i_sablon" data-bs-parent="#mpr3_pregled">
+                      <div class="accordion-body">
+                        <ul class="nav nav-tabs" id="sklopni_crtez_i_sablon_Tab" role="tablist">
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="sklopni_crtez-tab" data-bs-toggle="tab" data-bs-target="#sklopni_crtez" type="button" role="tab" aria-controls="sklopni_crtez" aria-selected="true">"Exploded View"</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="sablon-tab" data-bs-toggle="tab" data-bs-target="#sablon" type="button" role="tab" aria-controls="sablon" aria-selected="false">"Trailing zeroes remove"</button>
+                          </li>
+                        </ul>
+                        <div class="tab-content" id="sklopni_crtez_i_sablon_TabContent">
+                          <div class="tab-pane show active" id="sklopni_crtez" role="tabpanel" aria-labelledby="sklopni_crtez-tab">
+                            <div class="card ratio ratio-16x9">
+                              <iframe width="560" height="315" src="https://www.youtube.com/embed/aZvEEC2SGbo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                          </div>
+                          <div class="tab-pane" id="sablon" role="tabpanel" aria-labelledby="sablon-tab">
+                            <div class="card ratio ratio-16x9">
+                              <iframe width="560" height="315" src="https://www.youtube.com/embed/ZMUJ3O3WLxc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="mali_dodatak" role="tabpanel" aria-labelledby="mali_dodatak-tab">
+                <div class="accordion" id="mali_dodatak_nppu">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="resenje_zadatka">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_resenje_zadatka" aria-expanded="true" aria-controls="collapse_resenje_zadatka">
+                        30.4.2022. год. Републичко такмичење - решење задатка
+                      </button>
+                    </h2>
+                    <div id="collapse_resenje_zadatka" class="accordion-collapse collapse show" aria-labelledby="resenje_zadatka" data-bs-parent="#mali_dodatak_nppu">
+                      <div class="accordion-body">
+                        <img src="Pictures/Crtezi/Zadatak.jpg" width="100%" alt="Решење задатка">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="zadatak_model">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_zadatak_model" aria-expanded="true" aria-controls="collapse_zadatak_model">
+                        Израда модела
+                      </button>
+                    </h2>
+                    <div id="collapse_zadatak_model" class="accordion-collapse collapse" aria-labelledby="zadatak_model" data-bs-parent="#mali_dodatak_nppu">
+                      <div class="accordion-body">
+                        <div class="card ratio ratio-16x9">
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/JbfPwoCXDZ8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="zadatak_crtez">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_zadatak_crtez" aria-expanded="true" aria-controls="collapse_zadatak_crtez">
+                        Израда цртежа
+                      </button>
+                    </h2>
+                    <div id="collapse_zadatak_crtez" class="accordion-collapse collapse" aria-labelledby="zadatak_crtez" data-bs-parent="#mali_dodatak_nppu">
+                      <div class="accordion-body">
+                        <div class="card ratio ratio-16x9">
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/ugYMRWDXYto" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="download_dokumenata">
+                      <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_download_dokumenata" aria-expanded="true" aria-controls="collapse_download_dokumenata">
+                        "Download" докумената
+                      </button>
+                    </h2>
+                    <div id="collapse_download_dokumenata" class="accordion-collapse collapse" aria-labelledby="download_dokumenata" data-bs-parent="#mali_dodatak_nppu">
+                      <div class="accordion-body">
+                        <p>
+                          <a href="static/Zadatak_30_4_2022.pdf">"PDF"-ов документ, задатак - download</a>
+                        </p>
+                        <p>
+                          <a href="static/Zadatak_resenje_30_4_2022.pdf">"PDF" документ, решење задатка - download</a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- footer -->
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <nav class="card-header" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item">&copy; Slobodan Ivković</li>
+                  <li class="breadcrumb-item"><a href="https://www.linkedin.com/in/slobodan-ivkovic-a08326ba"><img src="Pictures/Icons/linkedin.png" alt="linkedin logo"></a></li>
+                  <li class="breadcrumb-item"><a href="https://twitter.com/slobodan_iv"><img src="Pictures/Icons/twitter.png" alt="twitter logo"></a></li>
+                  <li class="breadcrumb-item"><a href="https://www.youtube.com/user/Mickijedini"><img src="Pictures/Icons/youtube.png" alt="youtube logo"></a></li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- container -->
+
+    
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script> -->
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>-->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
